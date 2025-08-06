@@ -3,9 +3,9 @@ function formReset() {
 	document.querySelector('h2').hidden = false;
 	document.getElementById("backbutt").hidden = false;
 	document.getElementById("forbutt").hidden = false;
+	document.getElementById("matrixlimits").hidden = false;
 	document.getElementById("convertbutt").onclick = convert;
 	document.getElementById('showcase').innerHTML = "<span class=\"placeholder\">*HTML view will appear here*</span>";
-
 	document.querySelector('h2').textContent = "No ASCII converted yet!";
 
 	
@@ -89,7 +89,7 @@ function switchconv() {
 	document.querySelector('h2').hidden = convmatrix;
 	document.getElementById("backbutt").hidden = convmatrix;
 	document.getElementById("forbutt").hidden = convmatrix;
-	
+	document.getElementById("matrixlimits").hidden = convmatrix;
 
 	convmatrix = !convmatrix;
 
@@ -184,6 +184,7 @@ function convert() {
 		if (tempcase.length + showcases[cur_case] > matrixLimit || cur_line > maxLines || element_count > elementLimit) {
 			cur_case += 1;
 			showcases[cur_case] = tempcase;
+			element_count = 0;
 			cur_line = 1;
 		} else {
 			showcases[cur_case] += tempcase;

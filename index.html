@@ -23,12 +23,14 @@
 							<br>
 							<label>
 								<input type="radio" name="ratio" value="2" onclick="switchconv()">HTML</label>
-							<br><br><b>Matrix Limits:</b><br>
-							(dont fuck with this unless the message is too large to send)
-							<b>maxLines:</b> <input type="number" id="linecount" value="30" style="width: 80px;" oninput="updateLines()" /><br>
-							<b>matrixLimit:</b> <input type="number" id="limitcount" value="2000" style="width: 80px;" oninput="updateLimit()"/><br>
-							<b>maxElements:</b> <input type="number" id="elementcount" value="2000" style="width: 80px;" oninput="updateElements()"/><br>
-							<b></b>
+							<div id="matrixlimits">
+								<br><br><b>Matrix Limits:</b><br>
+								(dont fuck with this unless the message is too large to send)
+								<b>maxLines:</b> <input type="number" id="linecount" value="30" style="width: 80px;" oninput="updateLines()" /><br>
+								<b>matrixLimit:</b> <input type="number" id="limitcount" value="2000" style="width: 80px;" oninput="updateLimit()"/><br>
+								<b>maxElements:</b> <input type="number" id="elementcount" value="2000" style="width: 80px;" oninput="updateElements()"/><br>
+								<b></b>
+							</div>
 						</td>
 						<td rowspan="3" width="45%">
 							<textarea width="100%" id="html" name="html" placeholder="*HTML code will appear here*" readonly></textarea>
