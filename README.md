@@ -1,6 +1,6 @@
 # irc2html2matrix
 
-Thanks again to the (ircart)[https://github.com/ircart/irc2html] crew for providing the original code
+Thanks again to the [ircart](https://github.com/ircart/irc2html) crew for providing the original code
 
 for asciis that change color often (such as hueg.pl), ive found that Elements needs to be set to around 500s.
 
