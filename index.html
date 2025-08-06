@@ -15,8 +15,20 @@
 							<textarea width="100%" id="text" name="text" placeholder="*Enter ASCII here*"></textarea>
 						</td>
 						<td align="center" height="33%" valign="top">
-							<b>IRC2HTML</b>
-							<br><small><i>(<a href="https://acid.vegas/irc2html">source</a>)</i></small>
+							<b>IRC2HTML2MATRIX</b>
+							<br><small><i>thanks to ircart for the original code (<a href="https://acid.vegas/irc2html">source</a>)</i></small>
+							<br><br><b>Conversion Type:</b><br>
+							<label>
+								<input type="radio" name="ratio" value="1" onclick="switchconv()" checked>Matrix</label>
+							<br>
+							<label>
+								<input type="radio" name="ratio" value="2" onclick="switchconv()">HTML</label>
+							<br><br><b>Matrix Limits:</b><br>
+							(dont fuck with this unless the message is too large to send)
+							<b>maxLines:</b> <input type="number" id="linecount" value="30" style="width: 80px;" oninput="updateLines()" /><br>
+							<b>matrixLimit:</b> <input type="number" id="limitcount" value="2000" style="width: 80px;" oninput="updateLimit()"/><br>
+							<b>maxElements:</b> <input type="number" id="elementcount" value="1020" style="width: 80px;" oninput="updateElements()"/><br>
+							<b></b>
 						</td>
 						<td rowspan="3" width="45%">
 							<textarea width="100%" id="html" name="html" placeholder="*HTML code will appear here*" readonly></textarea>
@@ -24,7 +36,10 @@
 					</tr>
 					<tr>
 						<td height="33%" width="10%">
-							<input class="butt" type="submit" name="submit" value="Convert" onclick="return convert();"/>
+							<h2>No ASCII converted yet!</h2>
+							<input class="butt" id="forbutt" type="button" name="next" value="Next" onclick="return nextpart();"/><br><br>
+							<input class="butt" id="backbutt" type="button" name="back" value="Back" onclick="return backpart();"/><br><br>
+							<input class="butt" id="convertbutt" type="button" name="submit" value="Convert" onclick="return convert();"/>
 							<br><br><input class="butt" type="reset" name="reset" value="Reset" onclick="formReset();"/>
 							<br><br><input class="butt" type="button" name="download" value="Download" onclick="Download();"/>
 						</td>
@@ -39,6 +54,7 @@
 		<div id="showcase" class="showcase">
 			<span class="placeholder">*HTML view will appear here*</span>
 		</div>
+		
 	</div>
 	<script type="text/javascript">
 		document.getElementById("script").style.display = "block";
