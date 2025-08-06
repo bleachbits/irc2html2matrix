@@ -3,11 +3,11 @@ function formReset() {
 	document.querySelector('h2').hidden = false;
 	document.getElementById("backbutt").hidden = false;
 	document.getElementById("forbutt").hidden = false;
-	
-
-
 	document.getElementById("convertbutt").onclick = convert;
 	document.getElementById('showcase').innerHTML = "<span class=\"placeholder\">*HTML view will appear here*</span>";
+
+	document.querySelector('h2').textContent = "No ASCII converted yet!";
+
 	
 }
 
