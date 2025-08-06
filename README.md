@@ -6,6 +6,8 @@ for asciis that change color often (such as hueg.pl), ive found that Elements ne
 
 its reccomended to play around with the values so you dont get ratelimited or rejected by the server.
 
+for smaller asciis you can crank up max elements. all depends on the type used.
+
 if you find any errors please push a PR
 
 god help you.
