@@ -60,14 +60,7 @@ const mircColors = {
   }
 };
 
-function toggle(bool) {
-	if (bool == true) {
-		return false;
-	}
-	else {
-		return true;
-	}
-}
+
 var showcases = [""];
 var cur_part = 0;
 var convmatrix = true;
@@ -86,6 +79,7 @@ function updateElements() {
 }
 
 function switchconv() {
+	convmatrix = document.getElementById("htmlbutt").checked
 	document.querySelector('h2').hidden = convmatrix;
 	document.getElementById("backbutt").hidden = convmatrix;
 	document.getElementById("forbutt").hidden = convmatrix;
@@ -245,16 +239,16 @@ function converthtml() {
 			else {
 				f = lastf, b = lastb;
 				if (match[5] == '') {
-					bold = toggle(bold);
+					bold = !bold;
 				}
 				else if (match[5] == '') {
-					italic = toggle(italic);
+					italic = !italic;
 				}
 				else if (match[5] == '') {
-					underline = toggle(underline);
+					underline = !underline;
 				}
 				else if (match[5] == '') {
-					reverse = toggle(reverse);
+					reverse = !reverse;
 				}
 			}
 			if (reverse == false) {
