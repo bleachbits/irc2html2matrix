@@ -17,7 +17,7 @@ function formReset() {
 // it crapped out at 75k characters
 var matrixLimit = 2000;
 var maxLines = 30;
-var elementLimit = 50;
+var elementLimit = 1020;
 
 const mircColors = {
   foreground: {
